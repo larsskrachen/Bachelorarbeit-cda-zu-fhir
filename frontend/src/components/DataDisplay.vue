@@ -190,6 +190,11 @@
       </div>
     </div>
   </div>
+
+  <div v-if="fhirBundle" class="fhir-bundle">
+    <h2>FHIR Bundle</h2>
+    <pre>{{ fhirBundle }}</pre>
+  </div>
 </template>
 
 <script setup>
@@ -203,6 +208,7 @@ const props = defineProps({
   inhalte: Array,
   werte: Array
 })
+const fhirBundle = ref(null)
 
 const expandedAuftraege = ref([])
 const expandedDokumente = ref([])
@@ -361,8 +367,12 @@ const sendToApi = async () => {
       throw new Error('API request failed')
     }
 
+    // Hier ist die Korrektur: await das Promise von response.json()
+    const data = await response.json()
+    fhirBundle.value = data
+
     // Optional: Auswahl zurücksetzen
-    selectedItems.value = []
+    // selectedItems.value = []
 
   } catch (error) {
     console.error('Fehler beim Senden der Daten:', error)
@@ -577,5 +587,25 @@ h5 {
   padding: 5px;
   background-color: #f8f9fa;
   border-radius: 4px;
+}
+
+/* Verbessertes Styling für FHIR Bundle */
+.fhir-bundle {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.fhir-bundle pre {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
 }
 </style>

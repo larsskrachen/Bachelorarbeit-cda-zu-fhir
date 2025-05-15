@@ -34,18 +34,10 @@ public class CdaToFhirConverter {
         return defaultValue;
     }
 
-    // Mapping von CDA-Sektionen zu FHIR-Ressourcentypen
     private static final Map<String, String> SECTION_TO_RESOURCE_TYPE = Map.ofEntries(
             Map.entry("10160-0", "MedicationAdministration"),
             Map.entry("29762-2", "Observation"),
-            Map.entry("Allergies", "AllergyIntolerance"),
-            Map.entry("8716-3", "Observation"),
-            Map.entry("Problems", "Condition"),
-            Map.entry("Procedures", "Procedure"),
-            Map.entry("Immunizations", "Immunization"),
-            Map.entry("Results", "DiagnosticReport"),
-            Map.entry("Encounters", "Encounter"),
-            Map.entry("Plan of Care", "CarePlan")
+            Map.entry("8716-3", "Observation")
             // Weitere Mappings können hier hinzugefügt werden
     );
 
@@ -81,7 +73,7 @@ public class CdaToFhirConverter {
     private void processEntry(JsonObject entry, String sectionCode, Bundle bundle) {
         try {
             // Bestimme den FHIR-Ressourcentyp basierend auf dem Sektionstyp
-            String resourceType = SECTION_TO_RESOURCE_TYPE.getOrDefault(sectionCode, "Observation");
+            String resourceType = SECTION_TO_RESOURCE_TYPE.getOrDefault(sectionCode, null);
 
             // Map erstellen für einfacheren Zugriff auf Werte
             Map<String, String> valueMap = createValueMap(entry);
@@ -107,29 +99,13 @@ public class CdaToFhirConverter {
      * Erstellt eine FHIR-Resource basierend auf dem angegebenen Typ und den Werten
      */
     private Resource createResource(String resourceType, String inhaltId, Map<String, String> valueMap, String sectionCode) {
-        switch (resourceType) {
-            case "MedicationAdministration":
-                return createMedicationAdministration(inhaltId, valueMap);
-            case "Observation":
-                return createObservation(inhaltId, valueMap, sectionCode);
-            case "AllergyIntolerance":
-                return createAllergyIntolerance(inhaltId, valueMap);
-            case "Condition":
-                return createCondition(inhaltId, valueMap);
-//            case "Procedure":
-//                return createProcedure(inhaltId, valueMap);
-//            case "Immunization":
-//                return createImmunization(inhaltId, valueMap);
-//            case "DiagnosticReport":
-//                return createDiagnosticReport(inhaltId, valueMap);
-//            case "Encounter":
-//                return createEncounter(inhaltId, valueMap);
-//            case "CarePlan":
-//                return createCarePlan(inhaltId, valueMap);
-            default:
-                // Standardmäßig eine generische Observation erstellen
-                return createGenericObservation(inhaltId, valueMap, sectionCode);
-        }
+        return switch (resourceType) {
+            case "MedicationAdministration" -> createMedicationAdministration(inhaltId, valueMap);
+            case "Observation" -> createObservation(inhaltId, valueMap, sectionCode);
+            default ->
+//                    createGenericObservation(inhaltId, valueMap, sectionCode);
+                null;
+        };
     }
 
     private Timing.UnitsOfTime mapCdaTimeUnitToFhir(String cdaTimeUnit) {
