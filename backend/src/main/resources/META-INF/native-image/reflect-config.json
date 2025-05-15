@@ -1,0 +1,12 @@
+[
+  {
+    "name": "org.openhealthtools.mdht.uml.cda.consol.ContinuityOfCareDocument",
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "org.openhealthtools.mdht.uml.cda.impl.ClinicalDocumentImpl",
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  }
+]

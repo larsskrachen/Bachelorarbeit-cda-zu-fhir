@@ -1,0 +1,117 @@
+cda-mapping:
+  resources:
+    medication-administration:
+      profile: https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerabreichung
+      status: completed
+      paths:
+        medication:
+          code:
+            paths:
+              - substanceAdministration.consumable.manufacturedProduct.manufacturedLabeledDrug.code@code
+              - substanceAdministration.consumable.Drug.code@code
+          display:
+            paths:
+              - substanceAdministration.consumable.manufacturedProduct.manufacturedLabeledDrug.code@displayName
+              - substanceAdministration.consumable.Drug.code@displayName
+          system:
+            paths:
+              - substanceAdministration.consumable.manufacturedProduct.manufacturedLabeledDrug.code@codeSystem
+              - substanceAdministration.consumable.Drug.code@codeSystem
+            default: http://loinc.org
+        dosage:
+          value:
+            paths:
+              - substanceAdministration.doseQuantity@value
+          unit:
+            paths:
+              - substanceAdministration.doseQuantity@unit
+          unit-system:
+            default: http://unitsofmeasure.org
+        route:
+          code:
+            paths:
+              - substanceAdministration.routeCode@code
+          display:
+            paths:
+              - substanceAdministration.routeCode@displayName
+          system:
+            paths:
+              - substanceAdministration.routeCode@codeSystem
+
+    observation:
+      social-history:
+        profile: http://hl7.org/fhir/StructureDefinition/Observation
+        status: final
+        paths:
+          code:
+            code:
+              paths:
+                - observation.code@code
+            system:
+              paths:
+                - observation.code@codeSystem
+              default: http://loinc.org
+            display:
+              paths:
+                - observation.code@displayName
+          effectiveDateTime:
+            effectiveDateTimeLow:
+              paths:
+                - observation.effectiveTime.low@value
+            effectiveDateTimeHigh:
+              paths:
+                - observation.effectiveTime.high@value
+
+      vital-signs:
+        profile: http://hl7.org/fhir/StructureDefinition/vitalsigns
+        status: final
+        paths:
+          code:
+            code:
+              paths:
+                - observation.code@code
+            system:
+              paths:
+                - observation.code@codeSystem
+              default: http://loinc.org
+            display:
+              paths:
+                - observation.code@displayName
+          effectiveTime:
+            effectiveTime:
+              paths:
+                - observation.effectiveTime.low@value
+          value:
+            type:
+              paths:
+                - observation.value@type
+            value:
+              paths:
+                - observation.value@value
+            unit:
+              paths:
+                - observation.value@unit
+            display:
+                paths:
+                    - observation.value@displayName
+            system:
+              paths:
+                - observation.value@codeSystem
+            code:
+              paths:
+                - observation.value@code
+          valueRatio:
+            numerator:
+              value:
+                paths:
+                  - observation.value.numerator@value
+              unit:
+                paths:
+                  - observation.value.numerator@unit
+            denominator:
+              value:
+                paths:
+                  - observation.value.denominator@value
+              unit:
+                paths:
+                  - observation.value.denominator@unit
