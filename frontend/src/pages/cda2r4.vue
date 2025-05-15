@@ -555,7 +555,7 @@ watch(files, () => {
           id="fhir-url"
           v-model="fhirServerUrl"
           type="url"
-          placeholder="z. B. http://fhir.example.com"
+          placeholder="z. B. http://localhost:8080/fhir"
           class="fhir-url-input"
         />
         <button :disabled="!canSendToFhir" class="fhir-send-button" @click="sendToFhirServer">

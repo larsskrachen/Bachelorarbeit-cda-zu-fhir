@@ -48,6 +48,16 @@
         }
       } ],
       "section": [ {
+        "title": "Vital Signs",
+        "code": {
+          "coding": [ {
+            "system": "http://loinc.org",
+            "code": "8716-3",
+            "display": "Vital signs"
+          } ]
+        },
+        "mode": "snapshot"
+      }, {
         "title": "Surgeries",
         "code": {
           "coding": [ {
@@ -68,13 +78,13 @@
           "display": "Medication Reconciliation (procedure)"
         }, {
           "reference": "Procedure/9",
-          "display": "Sputum examination (procedure)"
+          "display": "Throat culture (procedure)"
         }, {
           "reference": "Procedure/10",
           "display": "Medication Reconciliation (procedure)"
         }, {
           "reference": "Procedure/11",
-          "display": "Throat culture (procedure)"
+          "display": "Sputum examination (procedure)"
         }, {
           "reference": "Procedure/12",
           "display": "Medication Reconciliation (procedure)"
@@ -82,16 +92,6 @@
           "reference": "Procedure/13",
           "display": "Medication Reconciliation (procedure)"
         } ]
-      }, {
-        "title": "Vital Signs",
-        "code": {
-          "coding": [ {
-            "system": "http://loinc.org",
-            "code": "8716-3",
-            "display": "Vital signs"
-          } ]
-        },
-        "mode": "snapshot"
       }, {
         "title": "Diagnostic Results",
         "code": {
@@ -122,7 +122,7 @@
           "display": "Viral sinusitis (disorder)"
         }, {
           "reference": "Condition/17",
-          "display": "Viral sinusitis (disorder)"
+          "display": "Body mass index 30+ - obesity (finding)"
         }, {
           "reference": "Condition/18",
           "display": "Viral sinusitis (disorder)"
@@ -131,16 +131,16 @@
           "display": "Acute bronchitis (disorder)"
         }, {
           "reference": "Condition/20",
-          "display": "Body mass index 30+ - obesity (finding)"
+          "display": "Viral sinusitis (disorder)"
         }, {
           "reference": "Condition/21",
           "display": "Acute viral pharyngitis (disorder)"
         }, {
           "reference": "Condition/22",
-          "display": "Otitis media"
+          "display": "Viral sinusitis (disorder)"
         }, {
           "reference": "Condition/23",
-          "display": "Viral sinusitis (disorder)"
+          "display": "Otitis media"
         } ]
       }, {
         "title": "Medications",
@@ -154,13 +154,13 @@
         "mode": "snapshot",
         "entry": [ {
           "reference": "MedicationStatement/24",
-          "display": "Acetaminophen 325 MG Oral Tablet"
+          "display": "Amoxicillin 500 MG Oral Tablet"
         }, {
           "reference": "MedicationStatement/26",
           "display": "Acetaminophen 325 MG Oral Tablet"
         }, {
           "reference": "MedicationStatement/28",
-          "display": "Amoxicillin 500 MG Oral Tablet"
+          "display": "Acetaminophen 325 MG Oral Tablet"
         }, {
           "reference": "MedicationStatement/30",
           "display": "Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet"
@@ -180,7 +180,7 @@
           "display": "Well child visit (procedure)"
         }, {
           "reference": "Encounter/33",
-          "display": "Encounter for symptom"
+          "display": "Well child visit (procedure)"
         }, {
           "reference": "Encounter/34",
           "display": "Encounter for symptom"
@@ -189,7 +189,7 @@
           "display": "Well child visit (procedure)"
         }, {
           "reference": "Encounter/36",
-          "display": "Encounter for symptom"
+          "display": "Well child visit (procedure)"
         }, {
           "reference": "Encounter/37",
           "display": "Encounter for symptom"
@@ -201,25 +201,25 @@
           "display": "Well child visit (procedure)"
         }, {
           "reference": "Encounter/40",
-          "display": "Encounter for symptom"
+          "display": "Well child visit (procedure)"
         }, {
           "reference": "Encounter/41",
-          "display": "Well child visit (procedure)"
+          "display": "Encounter for symptom"
         }, {
           "reference": "Encounter/42",
-          "display": "Well child visit (procedure)"
+          "display": "Encounter for symptom"
         }, {
           "reference": "Encounter/43",
           "display": "Encounter for symptom"
         }, {
           "reference": "Encounter/44",
-          "display": "Well child visit (procedure)"
+          "display": "Encounter for symptom"
         }, {
           "reference": "Encounter/45",
-          "display": "Urgent care clinic (procedure)"
+          "display": "Well child visit (procedure)"
         }, {
           "reference": "Encounter/46",
-          "display": "Well child visit (procedure)"
+          "display": "Urgent care clinic (procedure)"
         }, {
           "reference": "Encounter/47",
           "display": "Well child visit (procedure)"
@@ -335,40 +335,6 @@
       "id": "6",
       "identifier": [ {
         "use": "official",
-        "value": "3f6eaf1e-9957-47a0-b39b-0a4c1086cc06"
-      } ],
-      "status": "completed",
-      "code": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "430193006",
-          "display": "Medication Reconciliation (procedure)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "430193006",
-          "display": "Medication Reconciliation (procedure)"
-        } ],
-        "text": "Medication Reconciliation (procedure)"
-      },
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "performedPeriod": {
-        "start": "2013-04-29T12:22:44+02:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Procedure",
-      "ifNoneExist": "Procedure?identifier=3f6eaf1e-9957-47a0-b39b-0a4c1086cc06"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Procedure",
-      "id": "7",
-      "identifier": [ {
-        "use": "official",
         "value": "b695a5eb-673c-4b35-b477-bcfd45f94847"
       } ],
       "status": "completed",
@@ -400,75 +366,7 @@
   }, {
     "resource": {
       "resourceType": "Procedure",
-      "id": "8",
-      "identifier": [ {
-        "use": "official",
-        "value": "5ca6af5b-b0d3-438e-9db2-afd0241fec34"
-      } ],
-      "status": "completed",
-      "code": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "430193006",
-          "display": "Medication Reconciliation (procedure)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "430193006",
-          "display": "Medication Reconciliation (procedure)"
-        } ],
-        "text": "Medication Reconciliation (procedure)"
-      },
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "performedPeriod": {
-        "start": "2015-05-11T12:22:44+02:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Procedure",
-      "ifNoneExist": "Procedure?identifier=5ca6af5b-b0d3-438e-9db2-afd0241fec34"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Procedure",
-      "id": "9",
-      "identifier": [ {
-        "use": "official",
-        "value": "bf085072-2e81-4299-b435-02de034f7109"
-      } ],
-      "status": "completed",
-      "code": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "269911007",
-          "display": "Sputum examination (procedure)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "269911007",
-          "display": "Sputum examination (procedure)"
-        } ],
-        "text": "Sputum examination (procedure)"
-      },
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "performedPeriod": {
-        "start": "2013-09-23T12:22:44+02:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Procedure",
-      "ifNoneExist": "Procedure?identifier=bf085072-2e81-4299-b435-02de034f7109"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Procedure",
-      "id": "10",
+      "id": "7",
       "identifier": [ {
         "use": "official",
         "value": "b63b2d0d-8a08-4055-b006-c0898888a9ba"
@@ -502,41 +400,7 @@
   }, {
     "resource": {
       "resourceType": "Procedure",
-      "id": "11",
-      "identifier": [ {
-        "use": "official",
-        "value": "f16e5c87-9405-498c-9731-0be0046733ae"
-      } ],
-      "status": "completed",
-      "code": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "117015009",
-          "display": "Throat culture (procedure)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "117015009",
-          "display": "Throat culture (procedure)"
-        } ],
-        "text": "Throat culture (procedure)"
-      },
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "performedPeriod": {
-        "start": "2011-09-15T12:22:44+02:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Procedure",
-      "ifNoneExist": "Procedure?identifier=f16e5c87-9405-498c-9731-0be0046733ae"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Procedure",
-      "id": "12",
+      "id": "8",
       "identifier": [ {
         "use": "official",
         "value": "3c7c482e-ac1c-4ca4-b051-05cddcf2f840"
@@ -570,7 +434,41 @@
   }, {
     "resource": {
       "resourceType": "Procedure",
-      "id": "13",
+      "id": "9",
+      "identifier": [ {
+        "use": "official",
+        "value": "f16e5c87-9405-498c-9731-0be0046733ae"
+      } ],
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "117015009",
+          "display": "Throat culture (procedure)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "117015009",
+          "display": "Throat culture (procedure)"
+        } ],
+        "text": "Throat culture (procedure)"
+      },
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "performedPeriod": {
+        "start": "2011-09-15T12:22:44+02:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Procedure",
+      "ifNoneExist": "Procedure?identifier=f16e5c87-9405-498c-9731-0be0046733ae"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "10",
       "identifier": [ {
         "use": "official",
         "value": "793b72fa-2c23-43a2-a9fe-635540ed231b"
@@ -600,6 +498,108 @@
       "method": "POST",
       "url": "Procedure",
       "ifNoneExist": "Procedure?identifier=793b72fa-2c23-43a2-a9fe-635540ed231b"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "11",
+      "identifier": [ {
+        "use": "official",
+        "value": "bf085072-2e81-4299-b435-02de034f7109"
+      } ],
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "269911007",
+          "display": "Sputum examination (procedure)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "269911007",
+          "display": "Sputum examination (procedure)"
+        } ],
+        "text": "Sputum examination (procedure)"
+      },
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "performedPeriod": {
+        "start": "2013-09-23T12:22:44+02:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Procedure",
+      "ifNoneExist": "Procedure?identifier=bf085072-2e81-4299-b435-02de034f7109"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "12",
+      "identifier": [ {
+        "use": "official",
+        "value": "3f6eaf1e-9957-47a0-b39b-0a4c1086cc06"
+      } ],
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "430193006",
+          "display": "Medication Reconciliation (procedure)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "430193006",
+          "display": "Medication Reconciliation (procedure)"
+        } ],
+        "text": "Medication Reconciliation (procedure)"
+      },
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "performedPeriod": {
+        "start": "2013-04-29T12:22:44+02:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Procedure",
+      "ifNoneExist": "Procedure?identifier=3f6eaf1e-9957-47a0-b39b-0a4c1086cc06"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "13",
+      "identifier": [ {
+        "use": "official",
+        "value": "5ca6af5b-b0d3-438e-9db2-afd0241fec34"
+      } ],
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "430193006",
+          "display": "Medication Reconciliation (procedure)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "430193006",
+          "display": "Medication Reconciliation (procedure)"
+        } ],
+        "text": "Medication Reconciliation (procedure)"
+      },
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "performedPeriod": {
+        "start": "2015-05-11T12:22:44+02:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Procedure",
+      "ifNoneExist": "Procedure?identifier=5ca6af5b-b0d3-438e-9db2-afd0241fec34"
     }
   }, {
     "resource": {
@@ -653,59 +653,6 @@
       "id": "16",
       "identifier": [ {
         "use": "official",
-        "value": "2715a225-89df-4c28-be62-7e3302e8fb97"
-      } ],
-      "clinicalStatus": {
-        "coding": [ {
-          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-          "code": "inactive",
-          "display": "Inactive"
-        } ]
-      },
-      "verificationStatus": {
-        "coding": [ {
-          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-          "code": "refuted",
-          "display": "Refuted"
-        } ]
-      },
-      "category": [ {
-        "coding": [ {
-          "system": "http://hl7.org/fhir/condition-category",
-          "code": "problem-list-item",
-          "display": "Problem List Item"
-        } ]
-      } ],
-      "code": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "444814009",
-          "display": "Viral sinusitis (disorder)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "444814009",
-          "display": "Viral sinusitis (disorder)"
-        } ],
-        "text": "Viral sinusitis (disorder)"
-      },
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "onsetDateTime": "2015-12-24T11:22:44+01:00",
-      "abatementDateTime": "2016-01-07T11:22:44+01:00"
-    },
-    "request": {
-      "method": "POST",
-      "url": "Condition",
-      "ifNoneExist": "Condition?identifier=2715a225-89df-4c28-be62-7e3302e8fb97"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Condition",
-      "id": "17",
-      "identifier": [ {
-        "use": "official",
         "value": "6e32d88c-faff-401b-affc-2d4b454e0710"
       } ],
       "clinicalStatus": {
@@ -756,113 +703,7 @@
   }, {
     "resource": {
       "resourceType": "Condition",
-      "id": "18",
-      "identifier": [ {
-        "use": "official",
-        "value": "56dd9852-d7a6-40cf-8f27-f1b06ea8483e"
-      } ],
-      "clinicalStatus": {
-        "coding": [ {
-          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-          "code": "inactive",
-          "display": "Inactive"
-        } ]
-      },
-      "verificationStatus": {
-        "coding": [ {
-          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-          "code": "refuted",
-          "display": "Refuted"
-        } ]
-      },
-      "category": [ {
-        "coding": [ {
-          "system": "http://hl7.org/fhir/condition-category",
-          "code": "problem-list-item",
-          "display": "Problem List Item"
-        } ]
-      } ],
-      "code": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "444814009",
-          "display": "Viral sinusitis (disorder)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "444814009",
-          "display": "Viral sinusitis (disorder)"
-        } ],
-        "text": "Viral sinusitis (disorder)"
-      },
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "onsetDateTime": "2018-03-03T11:22:44+01:00",
-      "abatementDateTime": "2018-03-24T12:22:44+01:00"
-    },
-    "request": {
-      "method": "POST",
-      "url": "Condition",
-      "ifNoneExist": "Condition?identifier=56dd9852-d7a6-40cf-8f27-f1b06ea8483e"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Condition",
-      "id": "19",
-      "identifier": [ {
-        "use": "official",
-        "value": "6ea4b346-d7f6-4010-b5ae-13c87ec670e6"
-      } ],
-      "clinicalStatus": {
-        "coding": [ {
-          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-          "code": "inactive",
-          "display": "Inactive"
-        } ]
-      },
-      "verificationStatus": {
-        "coding": [ {
-          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-          "code": "refuted",
-          "display": "Refuted"
-        } ]
-      },
-      "category": [ {
-        "coding": [ {
-          "system": "http://hl7.org/fhir/condition-category",
-          "code": "problem-list-item",
-          "display": "Problem List Item"
-        } ]
-      } ],
-      "code": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "10509002",
-          "display": "Acute bronchitis (disorder)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "10509002",
-          "display": "Acute bronchitis (disorder)"
-        } ],
-        "text": "Acute bronchitis (disorder)"
-      },
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "onsetDateTime": "2013-09-23T12:22:44+02:00",
-      "abatementDateTime": "2013-09-30T12:22:44+02:00"
-    },
-    "request": {
-      "method": "POST",
-      "url": "Condition",
-      "ifNoneExist": "Condition?identifier=6ea4b346-d7f6-4010-b5ae-13c87ec670e6"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Condition",
-      "id": "20",
+      "id": "17",
       "identifier": [ {
         "use": "official",
         "value": "9e8063f6-3e06-42a4-a8ed-335c7613243d"
@@ -930,6 +771,165 @@
   }, {
     "resource": {
       "resourceType": "Condition",
+      "id": "18",
+      "identifier": [ {
+        "use": "official",
+        "value": "2715a225-89df-4c28-be62-7e3302e8fb97"
+      } ],
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "inactive",
+          "display": "Inactive"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "refuted",
+          "display": "Refuted"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "444814009",
+          "display": "Viral sinusitis (disorder)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "444814009",
+          "display": "Viral sinusitis (disorder)"
+        } ],
+        "text": "Viral sinusitis (disorder)"
+      },
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "onsetDateTime": "2015-12-24T11:22:44+01:00",
+      "abatementDateTime": "2016-01-07T11:22:44+01:00"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Condition",
+      "ifNoneExist": "Condition?identifier=2715a225-89df-4c28-be62-7e3302e8fb97"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Condition",
+      "id": "19",
+      "identifier": [ {
+        "use": "official",
+        "value": "6ea4b346-d7f6-4010-b5ae-13c87ec670e6"
+      } ],
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "inactive",
+          "display": "Inactive"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "refuted",
+          "display": "Refuted"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "10509002",
+          "display": "Acute bronchitis (disorder)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "10509002",
+          "display": "Acute bronchitis (disorder)"
+        } ],
+        "text": "Acute bronchitis (disorder)"
+      },
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "onsetDateTime": "2013-09-23T12:22:44+02:00",
+      "abatementDateTime": "2013-09-30T12:22:44+02:00"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Condition",
+      "ifNoneExist": "Condition?identifier=6ea4b346-d7f6-4010-b5ae-13c87ec670e6"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Condition",
+      "id": "20",
+      "identifier": [ {
+        "use": "official",
+        "value": "c0390bdb-6797-4db5-b6ff-061a16540b14"
+      } ],
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "inactive",
+          "display": "Inactive"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "refuted",
+          "display": "Refuted"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "444814009",
+          "display": "Viral sinusitis (disorder)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "444814009",
+          "display": "Viral sinusitis (disorder)"
+        } ],
+        "text": "Viral sinusitis (disorder)"
+      },
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "onsetDateTime": "2016-10-11T12:22:44+02:00",
+      "abatementDateTime": "2016-11-01T12:22:44+01:00"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Condition",
+      "ifNoneExist": "Condition?identifier=c0390bdb-6797-4db5-b6ff-061a16540b14"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Condition",
       "id": "21",
       "identifier": [ {
         "use": "official",
@@ -986,6 +986,59 @@
       "id": "22",
       "identifier": [ {
         "use": "official",
+        "value": "56dd9852-d7a6-40cf-8f27-f1b06ea8483e"
+      } ],
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "inactive",
+          "display": "Inactive"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "refuted",
+          "display": "Refuted"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "444814009",
+          "display": "Viral sinusitis (disorder)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "444814009",
+          "display": "Viral sinusitis (disorder)"
+        } ],
+        "text": "Viral sinusitis (disorder)"
+      },
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "onsetDateTime": "2018-03-03T11:22:44+01:00",
+      "abatementDateTime": "2018-03-24T12:22:44+01:00"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Condition",
+      "ifNoneExist": "Condition?identifier=56dd9852-d7a6-40cf-8f27-f1b06ea8483e"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Condition",
+      "id": "23",
+      "identifier": [ {
+        "use": "official",
         "value": "ac1d5995-d428-44cd-b391-0d0898a8b19c"
       } ],
       "clinicalStatus": {
@@ -1035,162 +1088,8 @@
     }
   }, {
     "resource": {
-      "resourceType": "Condition",
-      "id": "23",
-      "identifier": [ {
-        "use": "official",
-        "value": "c0390bdb-6797-4db5-b6ff-061a16540b14"
-      } ],
-      "clinicalStatus": {
-        "coding": [ {
-          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-          "code": "inactive",
-          "display": "Inactive"
-        } ]
-      },
-      "verificationStatus": {
-        "coding": [ {
-          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-          "code": "refuted",
-          "display": "Refuted"
-        } ]
-      },
-      "category": [ {
-        "coding": [ {
-          "system": "http://hl7.org/fhir/condition-category",
-          "code": "problem-list-item",
-          "display": "Problem List Item"
-        } ]
-      } ],
-      "code": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "444814009",
-          "display": "Viral sinusitis (disorder)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "444814009",
-          "display": "Viral sinusitis (disorder)"
-        } ],
-        "text": "Viral sinusitis (disorder)"
-      },
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "onsetDateTime": "2016-10-11T12:22:44+02:00",
-      "abatementDateTime": "2016-11-01T12:22:44+01:00"
-    },
-    "request": {
-      "method": "POST",
-      "url": "Condition",
-      "ifNoneExist": "Condition?identifier=c0390bdb-6797-4db5-b6ff-061a16540b14"
-    }
-  }, {
-    "resource": {
       "resourceType": "MedicationStatement",
       "id": "24",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/3.0/StructureDefinition/extension-MedicationStatement.status",
-        "valueCode": "UNKNOWN"
-      } ],
-      "identifier": [ {
-        "use": "official",
-        "value": "6124e0f9-64f8-429a-9349-2dca1cefef1a"
-      } ],
-      "status": "completed",
-      "medicationReference": {
-        "reference": "Medication/25",
-        "display": "Acetaminophen 325 MG Oral Tablet"
-      },
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "effectivePeriod": {
-        "start": "2013-09-23T12:22:44+02:00",
-        "end": "2013-09-30T12:22:44+02:00"
-      },
-      "dosage": [ {
-        "doseAndRate": [ {
-          "doseQuantity": {
-            "value": 1,
-            "unit": "1",
-            "system": "http://unitsofmeasure.org/ucum.html"
-          }
-        } ]
-      } ]
-    },
-    "request": {
-      "method": "POST",
-      "url": "MedicationStatement",
-      "ifNoneExist": "MedicationStatement?identifier=6124e0f9-64f8-429a-9349-2dca1cefef1a"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Medication",
-      "id": "25",
-      "code": {
-        "coding": [ {
-          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-          "code": "313782",
-          "display": "Acetaminophen 325 MG Oral Tablet"
-        }, {
-          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-          "code": "313782",
-          "display": "Acetaminophen 325 MG Oral Tablet"
-        } ],
-        "text": "Acetaminophen 325 MG Oral Tablet"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Medication"
-    }
-  }, {
-    "resource": {
-      "resourceType": "MedicationStatement",
-      "id": "26",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/3.0/StructureDefinition/extension-MedicationStatement.status",
-        "valueCode": "UNKNOWN"
-      } ],
-      "identifier": [ {
-        "use": "official",
-        "value": "2b929e3f-265b-41b6-b62d-042b5533829f"
-      } ],
-      "status": "completed",
-      "medicationReference": {
-        "reference": "Medication/25",
-        "display": "Acetaminophen 325 MG Oral Tablet"
-      },
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "effectivePeriod": {
-        "start": "2019-01-16T11:22:44+01:00",
-        "end": "2019-01-30T11:22:44+01:00"
-      },
-      "dosage": [ {
-        "doseAndRate": [ {
-          "doseQuantity": {
-            "value": 1,
-            "unit": "1",
-            "system": "http://unitsofmeasure.org/ucum.html"
-          }
-        } ]
-      } ]
-    },
-    "request": {
-      "method": "POST",
-      "url": "MedicationStatement",
-      "ifNoneExist": "MedicationStatement?identifier=2b929e3f-265b-41b6-b62d-042b5533829f"
-    }
-  }, {
-    "resource": {
-      "resourceType": "MedicationStatement",
-      "id": "28",
       "extension": [ {
         "url": "http://hl7.org/fhir/3.0/StructureDefinition/extension-MedicationStatement.status",
         "valueCode": "UNKNOWN"
@@ -1201,7 +1100,7 @@
       } ],
       "status": "completed",
       "medicationReference": {
-        "reference": "Medication/29",
+        "reference": "Medication/25",
         "display": "Amoxicillin 500 MG Oral Tablet"
       },
       "subject": {
@@ -1230,7 +1129,7 @@
   }, {
     "resource": {
       "resourceType": "Medication",
-      "id": "29",
+      "id": "25",
       "code": {
         "coding": [ {
           "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
@@ -1247,6 +1146,107 @@
     "request": {
       "method": "POST",
       "url": "Medication"
+    }
+  }, {
+    "resource": {
+      "resourceType": "MedicationStatement",
+      "id": "26",
+      "extension": [ {
+        "url": "http://hl7.org/fhir/3.0/StructureDefinition/extension-MedicationStatement.status",
+        "valueCode": "UNKNOWN"
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "2b929e3f-265b-41b6-b62d-042b5533829f"
+      } ],
+      "status": "completed",
+      "medicationReference": {
+        "reference": "Medication/27",
+        "display": "Acetaminophen 325 MG Oral Tablet"
+      },
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "effectivePeriod": {
+        "start": "2019-01-16T11:22:44+01:00",
+        "end": "2019-01-30T11:22:44+01:00"
+      },
+      "dosage": [ {
+        "doseAndRate": [ {
+          "doseQuantity": {
+            "value": 1,
+            "unit": "1",
+            "system": "http://unitsofmeasure.org/ucum.html"
+          }
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "MedicationStatement",
+      "ifNoneExist": "MedicationStatement?identifier=2b929e3f-265b-41b6-b62d-042b5533829f"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Medication",
+      "id": "27",
+      "code": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "313782",
+          "display": "Acetaminophen 325 MG Oral Tablet"
+        }, {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "313782",
+          "display": "Acetaminophen 325 MG Oral Tablet"
+        } ],
+        "text": "Acetaminophen 325 MG Oral Tablet"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Medication"
+    }
+  }, {
+    "resource": {
+      "resourceType": "MedicationStatement",
+      "id": "28",
+      "extension": [ {
+        "url": "http://hl7.org/fhir/3.0/StructureDefinition/extension-MedicationStatement.status",
+        "valueCode": "UNKNOWN"
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "6124e0f9-64f8-429a-9349-2dca1cefef1a"
+      } ],
+      "status": "completed",
+      "medicationReference": {
+        "reference": "Medication/27",
+        "display": "Acetaminophen 325 MG Oral Tablet"
+      },
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "effectivePeriod": {
+        "start": "2013-09-23T12:22:44+02:00",
+        "end": "2013-09-30T12:22:44+02:00"
+      },
+      "dosage": [ {
+        "doseAndRate": [ {
+          "doseQuantity": {
+            "value": 1,
+            "unit": "1",
+            "system": "http://unitsofmeasure.org/ucum.html"
+          }
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "POST",
+      "url": "MedicationStatement",
+      "ifNoneExist": "MedicationStatement?identifier=6124e0f9-64f8-429a-9349-2dca1cefef1a"
     }
   }, {
     "resource": {
@@ -1350,34 +1350,34 @@
       "id": "33",
       "identifier": [ {
         "use": "official",
-        "value": "f3e0a66f-4a9d-4bc6-a6fd-84715c290b9e"
+        "value": "590a3914-5923-476b-99a9-d2cd12d58cc2"
       } ],
       "status": "finished",
       "type": [ {
         "coding": [ {
           "system": "http://snomed.info/sct",
-          "code": "185345009",
-          "display": "Encounter for symptom"
+          "code": "410620009",
+          "display": "Well child visit (procedure)"
         }, {
           "system": "http://snomed.info/sct",
-          "code": "185345009",
-          "display": "Encounter for symptom"
+          "code": "410620009",
+          "display": "Well child visit (procedure)"
         } ],
-        "text": "Encounter for symptom"
+        "text": "Well child visit (procedure)"
       } ],
       "subject": {
         "reference": "Patient/2",
         "display": "Abraham100 Heller342"
       },
       "period": {
-        "start": "2019-01-16T11:22:44+01:00",
-        "end": "2019-01-16T11:37:44+01:00"
+        "start": "2012-04-23T12:22:44+02:00",
+        "end": "2012-04-23T12:37:44+02:00"
       }
     },
     "request": {
       "method": "POST",
       "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=f3e0a66f-4a9d-4bc6-a6fd-84715c290b9e"
+      "ifNoneExist": "Encounter?identifier=590a3914-5923-476b-99a9-d2cd12d58cc2"
     }
   }, {
     "resource": {
@@ -1385,7 +1385,7 @@
       "id": "34",
       "identifier": [ {
         "use": "official",
-        "value": "12bb35a2-e9a8-4387-8f17-0a1c91b65bc6"
+        "value": "72a1bfe2-a34c-4d71-a77e-2f2cdc39248f"
       } ],
       "status": "finished",
       "type": [ {
@@ -1405,14 +1405,14 @@
         "display": "Abraham100 Heller342"
       },
       "period": {
-        "start": "2011-09-15T12:22:44+02:00",
-        "end": "2011-09-15T12:52:44+02:00"
+        "start": "2010-10-05T12:22:44+02:00",
+        "end": "2010-10-05T12:37:44+02:00"
       }
     },
     "request": {
       "method": "POST",
       "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=12bb35a2-e9a8-4387-8f17-0a1c91b65bc6"
+      "ifNoneExist": "Encounter?identifier=72a1bfe2-a34c-4d71-a77e-2f2cdc39248f"
     }
   }, {
     "resource": {
@@ -1455,34 +1455,34 @@
       "id": "36",
       "identifier": [ {
         "use": "official",
-        "value": "72a1bfe2-a34c-4d71-a77e-2f2cdc39248f"
+        "value": "4d7edfa7-d44c-4d6f-bac9-e479a2566712"
       } ],
       "status": "finished",
       "type": [ {
         "coding": [ {
           "system": "http://snomed.info/sct",
-          "code": "185345009",
-          "display": "Encounter for symptom"
+          "code": "410620009",
+          "display": "Well child visit (procedure)"
         }, {
           "system": "http://snomed.info/sct",
-          "code": "185345009",
-          "display": "Encounter for symptom"
+          "code": "410620009",
+          "display": "Well child visit (procedure)"
         } ],
-        "text": "Encounter for symptom"
+        "text": "Well child visit (procedure)"
       } ],
       "subject": {
         "reference": "Patient/2",
         "display": "Abraham100 Heller342"
       },
       "period": {
-        "start": "2010-10-05T12:22:44+02:00",
-        "end": "2010-10-05T12:37:44+02:00"
+        "start": "2010-04-12T12:22:44+02:00",
+        "end": "2010-04-12T12:52:44+02:00"
       }
     },
     "request": {
       "method": "POST",
       "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=72a1bfe2-a34c-4d71-a77e-2f2cdc39248f"
+      "ifNoneExist": "Encounter?identifier=4d7edfa7-d44c-4d6f-bac9-e479a2566712"
     }
   }, {
     "resource": {
@@ -1525,216 +1525,6 @@
       "id": "38",
       "identifier": [ {
         "use": "official",
-        "value": "0edf43d0-1b6b-404b-991f-33f8b7a894f9"
-      } ],
-      "status": "finished",
-      "type": [ {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "410620009",
-          "display": "Well child visit (procedure)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "410620009",
-          "display": "Well child visit (procedure)"
-        } ],
-        "text": "Well child visit (procedure)"
-      } ],
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "period": {
-        "start": "2014-05-05T12:22:44+02:00",
-        "end": "2014-05-05T12:37:44+02:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=0edf43d0-1b6b-404b-991f-33f8b7a894f9"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Encounter",
-      "id": "39",
-      "identifier": [ {
-        "use": "official",
-        "value": "f1f55dec-a2e9-42cd-9ece-2610b8353ccd"
-      } ],
-      "status": "finished",
-      "type": [ {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "410620009",
-          "display": "Well child visit (procedure)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "410620009",
-          "display": "Well child visit (procedure)"
-        } ],
-        "text": "Well child visit (procedure)"
-      } ],
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "period": {
-        "start": "2011-04-18T12:22:44+02:00",
-        "end": "2011-04-18T12:37:44+02:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=f1f55dec-a2e9-42cd-9ece-2610b8353ccd"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Encounter",
-      "id": "40",
-      "identifier": [ {
-        "use": "official",
-        "value": "2d9bb0eb-5d11-4006-a1a7-c13da34ed595"
-      } ],
-      "status": "finished",
-      "type": [ {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "185345009",
-          "display": "Encounter for symptom"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "185345009",
-          "display": "Encounter for symptom"
-        } ],
-        "text": "Encounter for symptom"
-      } ],
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "period": {
-        "start": "2016-10-11T12:22:44+02:00",
-        "end": "2016-10-11T12:37:44+02:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=2d9bb0eb-5d11-4006-a1a7-c13da34ed595"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Encounter",
-      "id": "41",
-      "identifier": [ {
-        "use": "official",
-        "value": "590a3914-5923-476b-99a9-d2cd12d58cc2"
-      } ],
-      "status": "finished",
-      "type": [ {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "410620009",
-          "display": "Well child visit (procedure)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "410620009",
-          "display": "Well child visit (procedure)"
-        } ],
-        "text": "Well child visit (procedure)"
-      } ],
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "period": {
-        "start": "2012-04-23T12:22:44+02:00",
-        "end": "2012-04-23T12:37:44+02:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=590a3914-5923-476b-99a9-d2cd12d58cc2"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Encounter",
-      "id": "42",
-      "identifier": [ {
-        "use": "official",
-        "value": "7b299ff3-cfa6-4e13-b66f-1838c27e1495"
-      } ],
-      "status": "finished",
-      "type": [ {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "410620009",
-          "display": "Well child visit (procedure)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "410620009",
-          "display": "Well child visit (procedure)"
-        } ],
-        "text": "Well child visit (procedure)"
-      } ],
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "period": {
-        "start": "2019-06-03T12:22:44+02:00",
-        "end": "2019-06-03T12:37:44+02:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=7b299ff3-cfa6-4e13-b66f-1838c27e1495"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Encounter",
-      "id": "43",
-      "identifier": [ {
-        "use": "official",
-        "value": "f76fb7d8-52a6-4557-a8c6-d80623ce629b"
-      } ],
-      "status": "finished",
-      "type": [ {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "185345009",
-          "display": "Encounter for symptom"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "185345009",
-          "display": "Encounter for symptom"
-        } ],
-        "text": "Encounter for symptom"
-      } ],
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "period": {
-        "start": "2018-03-03T11:22:44+01:00",
-        "end": "2018-03-03T11:37:44+01:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=f76fb7d8-52a6-4557-a8c6-d80623ce629b"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Encounter",
-      "id": "44",
-      "identifier": [ {
-        "use": "official",
         "value": "95e127ea-ccec-431c-9ed8-b7bfe6b79a23"
       } ],
       "status": "finished",
@@ -1767,42 +1557,7 @@
   }, {
     "resource": {
       "resourceType": "Encounter",
-      "id": "45",
-      "identifier": [ {
-        "use": "official",
-        "value": "deee110b-a289-42ca-8887-8d95e701c64f"
-      } ],
-      "status": "finished",
-      "type": [ {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "702927004",
-          "display": "Urgent care clinic (procedure)"
-        }, {
-          "system": "http://snomed.info/sct",
-          "code": "702927004",
-          "display": "Urgent care clinic (procedure)"
-        } ],
-        "text": "Urgent care clinic (procedure)"
-      } ],
-      "subject": {
-        "reference": "Patient/2",
-        "display": "Abraham100 Heller342"
-      },
-      "period": {
-        "start": "2013-09-30T12:22:44+02:00",
-        "end": "2013-09-30T12:37:44+02:00"
-      }
-    },
-    "request": {
-      "method": "POST",
-      "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=deee110b-a289-42ca-8887-8d95e701c64f"
-    }
-  }, {
-    "resource": {
-      "resourceType": "Encounter",
-      "id": "46",
+      "id": "39",
       "identifier": [ {
         "use": "official",
         "value": "8fe20b5a-66a1-4a1b-96f3-1e0c3e22361f"
@@ -1837,10 +1592,10 @@
   }, {
     "resource": {
       "resourceType": "Encounter",
-      "id": "47",
+      "id": "40",
       "identifier": [ {
         "use": "official",
-        "value": "4d7edfa7-d44c-4d6f-bac9-e479a2566712"
+        "value": "0edf43d0-1b6b-404b-991f-33f8b7a894f9"
       } ],
       "status": "finished",
       "type": [ {
@@ -1860,14 +1615,259 @@
         "display": "Abraham100 Heller342"
       },
       "period": {
-        "start": "2010-04-12T12:22:44+02:00",
-        "end": "2010-04-12T12:52:44+02:00"
+        "start": "2014-05-05T12:22:44+02:00",
+        "end": "2014-05-05T12:37:44+02:00"
       }
     },
     "request": {
       "method": "POST",
       "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=4d7edfa7-d44c-4d6f-bac9-e479a2566712"
+      "ifNoneExist": "Encounter?identifier=0edf43d0-1b6b-404b-991f-33f8b7a894f9"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "41",
+      "identifier": [ {
+        "use": "official",
+        "value": "2d9bb0eb-5d11-4006-a1a7-c13da34ed595"
+      } ],
+      "status": "finished",
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185345009",
+          "display": "Encounter for symptom"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "185345009",
+          "display": "Encounter for symptom"
+        } ],
+        "text": "Encounter for symptom"
+      } ],
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "period": {
+        "start": "2016-10-11T12:22:44+02:00",
+        "end": "2016-10-11T12:37:44+02:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Encounter",
+      "ifNoneExist": "Encounter?identifier=2d9bb0eb-5d11-4006-a1a7-c13da34ed595"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "42",
+      "identifier": [ {
+        "use": "official",
+        "value": "f3e0a66f-4a9d-4bc6-a6fd-84715c290b9e"
+      } ],
+      "status": "finished",
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185345009",
+          "display": "Encounter for symptom"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "185345009",
+          "display": "Encounter for symptom"
+        } ],
+        "text": "Encounter for symptom"
+      } ],
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "period": {
+        "start": "2019-01-16T11:22:44+01:00",
+        "end": "2019-01-16T11:37:44+01:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Encounter",
+      "ifNoneExist": "Encounter?identifier=f3e0a66f-4a9d-4bc6-a6fd-84715c290b9e"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "43",
+      "identifier": [ {
+        "use": "official",
+        "value": "12bb35a2-e9a8-4387-8f17-0a1c91b65bc6"
+      } ],
+      "status": "finished",
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185345009",
+          "display": "Encounter for symptom"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "185345009",
+          "display": "Encounter for symptom"
+        } ],
+        "text": "Encounter for symptom"
+      } ],
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "period": {
+        "start": "2011-09-15T12:22:44+02:00",
+        "end": "2011-09-15T12:52:44+02:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Encounter",
+      "ifNoneExist": "Encounter?identifier=12bb35a2-e9a8-4387-8f17-0a1c91b65bc6"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "44",
+      "identifier": [ {
+        "use": "official",
+        "value": "8dfb62b8-b814-4c8c-96e5-0eecc6b32fb6"
+      } ],
+      "status": "finished",
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "185345009",
+          "display": "Encounter for symptom"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "185345009",
+          "display": "Encounter for symptom"
+        } ],
+        "text": "Encounter for symptom"
+      } ],
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "period": {
+        "start": "2015-12-24T11:22:44+01:00",
+        "end": "2015-12-24T11:37:44+01:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Encounter",
+      "ifNoneExist": "Encounter?identifier=8dfb62b8-b814-4c8c-96e5-0eecc6b32fb6"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "45",
+      "identifier": [ {
+        "use": "official",
+        "value": "f1f55dec-a2e9-42cd-9ece-2610b8353ccd"
+      } ],
+      "status": "finished",
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "410620009",
+          "display": "Well child visit (procedure)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "410620009",
+          "display": "Well child visit (procedure)"
+        } ],
+        "text": "Well child visit (procedure)"
+      } ],
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "period": {
+        "start": "2011-04-18T12:22:44+02:00",
+        "end": "2011-04-18T12:37:44+02:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Encounter",
+      "ifNoneExist": "Encounter?identifier=f1f55dec-a2e9-42cd-9ece-2610b8353ccd"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "46",
+      "identifier": [ {
+        "use": "official",
+        "value": "deee110b-a289-42ca-8887-8d95e701c64f"
+      } ],
+      "status": "finished",
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "702927004",
+          "display": "Urgent care clinic (procedure)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "702927004",
+          "display": "Urgent care clinic (procedure)"
+        } ],
+        "text": "Urgent care clinic (procedure)"
+      } ],
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "period": {
+        "start": "2013-09-30T12:22:44+02:00",
+        "end": "2013-09-30T12:37:44+02:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Encounter",
+      "ifNoneExist": "Encounter?identifier=deee110b-a289-42ca-8887-8d95e701c64f"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "47",
+      "identifier": [ {
+        "use": "official",
+        "value": "7b299ff3-cfa6-4e13-b66f-1838c27e1495"
+      } ],
+      "status": "finished",
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "410620009",
+          "display": "Well child visit (procedure)"
+        }, {
+          "system": "http://snomed.info/sct",
+          "code": "410620009",
+          "display": "Well child visit (procedure)"
+        } ],
+        "text": "Well child visit (procedure)"
+      } ],
+      "subject": {
+        "reference": "Patient/2",
+        "display": "Abraham100 Heller342"
+      },
+      "period": {
+        "start": "2019-06-03T12:22:44+02:00",
+        "end": "2019-06-03T12:37:44+02:00"
+      }
+    },
+    "request": {
+      "method": "POST",
+      "url": "Encounter",
+      "ifNoneExist": "Encounter?identifier=7b299ff3-cfa6-4e13-b66f-1838c27e1495"
     }
   }, {
     "resource": {
@@ -1910,7 +1910,7 @@
       "id": "49",
       "identifier": [ {
         "use": "official",
-        "value": "8dfb62b8-b814-4c8c-96e5-0eecc6b32fb6"
+        "value": "f76fb7d8-52a6-4557-a8c6-d80623ce629b"
       } ],
       "status": "finished",
       "type": [ {
@@ -1930,14 +1930,14 @@
         "display": "Abraham100 Heller342"
       },
       "period": {
-        "start": "2015-12-24T11:22:44+01:00",
-        "end": "2015-12-24T11:37:44+01:00"
+        "start": "2018-03-03T11:22:44+01:00",
+        "end": "2018-03-03T11:37:44+01:00"
       }
     },
     "request": {
       "method": "POST",
       "url": "Encounter",
-      "ifNoneExist": "Encounter?identifier=8dfb62b8-b814-4c8c-96e5-0eecc6b32fb6"
+      "ifNoneExist": "Encounter?identifier=f76fb7d8-52a6-4557-a8c6-d80623ce629b"
     }
   } ]
 }

@@ -20,7 +20,8 @@
             </div>
 
             <p class="card-description">
-              Untersuchung der Machbarkeit des Mappings von CDA zu FHIR mit einem eigenen Ansatz. Prototypisch implementiert.
+              Untersuchung der Machbarkeit des Mappings von CDA zu FHIR mit einem eigenen Ansatz.
+              Zu Demozwecken nur "Vital Sign", "Social History" und "Medication" implementiert.
             </p>
 
             <div class="card-footer">
@@ -40,6 +41,7 @@
 
             <p class="card-description">
               Prototypische Implementierung des Mappings von CDA zu FHIR mittels der cda2r4-Bibliothek.
+
             </p>
 
             <div class="card-footer">
